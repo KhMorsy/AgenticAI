@@ -2,7 +2,8 @@
 
 import pytest
 
-from src.core.task_manager import Task, TaskManager, TaskPriority, TaskStatus
+from src.core.llm_provider import LLMProviderConfig, LLMProviderType
+from src.core.task_manager import TaskManager, TaskPriority, TaskStatus
 from src.core.template_engine import (
     NewsletterData,
     NewsletterSection,
@@ -10,8 +11,6 @@ from src.core.template_engine import (
     TemplateEngine,
 )
 from src.core.web_scraper import ScrapedPage, WebScraper
-from src.core.llm_provider import LLMProviderConfig, LLMProviderType
-
 
 # ---------------------------------------------------------------------------
 # TaskManager
@@ -116,13 +115,13 @@ class TestTaskManager:
 
     async def test_priority_queue_ordering(self):
         tm = TaskManager()
-        low = await tm.create_task(
+        await tm.create_task(
             type="low", description="low priority", priority=TaskPriority.LOW
         )
-        high = await tm.create_task(
+        await tm.create_task(
             type="high", description="high priority", priority=TaskPriority.HIGH
         )
-        critical = await tm.create_task(
+        await tm.create_task(
             type="critical",
             description="critical priority",
             priority=TaskPriority.CRITICAL,

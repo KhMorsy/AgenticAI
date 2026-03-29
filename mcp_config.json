@@ -1,0 +1,49 @@
+{
+  "mcpServers": {
+    "agentic-orchestrator": {
+      "command": "python",
+      "args": ["-m", "src.orchestrator.server"],
+      "env": {
+        "AGENTIC_LLM_PROVIDER": "openai",
+        "AGENTIC_LLM_MODEL": "gpt-4o",
+        "AGENTIC_LLM_API_KEY": "YOUR_API_KEY"
+      }
+    },
+    "sw-architect": {
+      "command": "python",
+      "args": ["-m", "src.agents.sw_architect.server"],
+      "env": {
+        "AGENTIC_LLM_PROVIDER": "openai",
+        "AGENTIC_LLM_MODEL": "gpt-4o",
+        "AGENTIC_LLM_API_KEY": "YOUR_API_KEY"
+      }
+    },
+    "generative-ai": {
+      "command": "python",
+      "args": ["-m", "src.agents.generative_ai.server"],
+      "env": {
+        "AGENTIC_LLM_PROVIDER": "openai",
+        "AGENTIC_LLM_MODEL": "gpt-4o",
+        "AGENTIC_LLM_API_KEY": "YOUR_API_KEY"
+      }
+    },
+    "business-developer": {
+      "command": "python",
+      "args": ["-m", "src.agents.business_developer.server"],
+      "env": {
+        "AGENTIC_LLM_PROVIDER": "openai",
+        "AGENTIC_LLM_MODEL": "gpt-4o",
+        "AGENTIC_LLM_API_KEY": "YOUR_API_KEY"
+      }
+    },
+    "physical-ai": {
+      "command": "python",
+      "args": ["-m", "src.agents.physical_ai.server"],
+      "env": {
+        "AGENTIC_LLM_PROVIDER": "openai",
+        "AGENTIC_LLM_MODEL": "gpt-4o",
+        "AGENTIC_LLM_API_KEY": "YOUR_API_KEY"
+      }
+    }
+  }
+}

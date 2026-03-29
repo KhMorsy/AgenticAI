@@ -1,0 +1,45 @@
+services:
+  orchestrator:
+    build:
+      context: .
+      target: runtime
+    command: ["src.orchestrator.server"]
+    env_file: .env
+    restart: unless-stopped
+    stdin_open: true
+
+  sw-architect:
+    build:
+      context: .
+      target: runtime
+    command: ["src.agents.sw_architect.server"]
+    env_file: .env
+    restart: unless-stopped
+    stdin_open: true
+
+  generative-ai:
+    build:
+      context: .
+      target: runtime
+    command: ["src.agents.generative_ai.server"]
+    env_file: .env
+    restart: unless-stopped
+    stdin_open: true
+
+  business-developer:
+    build:
+      context: .
+      target: runtime
+    command: ["src.agents.business_developer.server"]
+    env_file: .env
+    restart: unless-stopped
+    stdin_open: true
+
+  physical-ai:
+    build:
+      context: .
+      target: runtime
+    command: ["src.agents.physical_ai.server"]
+    env_file: .env
+    restart: unless-stopped
+    stdin_open: true

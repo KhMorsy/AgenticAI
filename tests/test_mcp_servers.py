@@ -1,11 +1,9 @@
 """Tests for MCP server modules."""
 
-import pytest
 
 from mcp.types import Tool
 
 from src.core.mcp_server import MCPServerBase
-
 
 # ---------------------------------------------------------------------------
 # MCPServerBase
@@ -102,12 +100,6 @@ class TestSWArchitectServer:
         from src.agents.sw_architect.server import create_server
 
         server = create_server()
-        tools_handler = None
-        for handler in server._tool_handlers.values() if hasattr(server, "_tool_handlers") else []:
-            tools_handler = handler
-            break
-        # The server registers list_tools and call_tool via decorators.
-        # We verify the server object is created and functional.
         assert server is not None
 
     def test_server_has_name(self):

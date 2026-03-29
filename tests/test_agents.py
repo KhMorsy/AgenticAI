@@ -2,30 +2,27 @@
 
 from unittest.mock import AsyncMock, MagicMock, patch
 
-import pytest
-
-from src.agents.sw_architect.agent import (
-    Architecture,
-    ProjectPlan,
-    SWArchitectAgent,
-    TechStack,
+from src.agents.business_developer.agent import (
+    BusinessAnalysis,
+    BusinessDeveloperAgent,
+    BusinessModel,
 )
 from src.agents.generative_ai.agent import (
     AINewsSummary,
     GenerativeAIAgent,
     IdeaProposal,
 )
-from src.agents.business_developer.agent import (
-    BusinessAnalysis,
-    BusinessDeveloperAgent,
-    BusinessModel,
-)
 from src.agents.physical_ai.agent import (
     AutomationIdea,
     NewsItem,
     PhysicalAIAgent,
 )
-
+from src.agents.sw_architect.agent import (
+    Architecture,
+    ProjectPlan,
+    SWArchitectAgent,
+    TechStack,
+)
 
 # ---------------------------------------------------------------------------
 # SWArchitectAgent
