@@ -2,38 +2,23 @@
   "mcpServers": {
     "agentic-orchestrator": {
       "command": "python3",
-      "args": ["-m", "src.orchestrator.server"],
-      "env": {
-        "AGENTIC_LLM_API_KEY": "${AGENTIC_LLM_API_KEY}"
-      }
+      "args": ["-m", "src.orchestrator.server"]
     },
     "sw-architect": {
       "command": "python3",
-      "args": ["-m", "src.agents.sw_architect.server"],
-      "env": {
-        "AGENTIC_LLM_API_KEY": "${AGENTIC_LLM_API_KEY}"
-      }
+      "args": ["-m", "src.agents.sw_architect.server"]
     },
     "generative-ai": {
       "command": "python3",
-      "args": ["-m", "src.agents.generative_ai.server"],
-      "env": {
-        "AGENTIC_LLM_API_KEY": "${AGENTIC_LLM_API_KEY}"
-      }
+      "args": ["-m", "src.agents.generative_ai.server"]
     },
     "business-developer": {
       "command": "python3",
-      "args": ["-m", "src.agents.business_developer.server"],
-      "env": {
-        "AGENTIC_LLM_API_KEY": "${AGENTIC_LLM_API_KEY}"
-      }
+      "args": ["-m", "src.agents.business_developer.server"]
     },
     "physical-ai": {
       "command": "python3",
-      "args": ["-m", "src.agents.physical_ai.server"],
-      "env": {
-        "AGENTIC_LLM_API_KEY": "${AGENTIC_LLM_API_KEY}"
-      }
+      "args": ["-m", "src.agents.physical_ai.server"]
     }
   }
 }
